@@ -73,6 +73,7 @@ class DeliveryDrone(FlyingRobot):
         if (
                 cargo is not None
                 and self.current_load is None
+                and self.max_load_weight is not None
                 and cargo.weight <= self.max_load_weight
         ):
             self.current_load = cargo
